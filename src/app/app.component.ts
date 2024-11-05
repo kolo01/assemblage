@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { AutoCompleteModule } from 'primeng/autocomplete';
 @Component({
   selector: 'app-root',
   standalone: true,

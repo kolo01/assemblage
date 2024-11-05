@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Property } from '../../../interfaces/property';
+import { Property } from '../../../domains/interfaces/property';
 import { BaseServicesService } from '../../../core/services/baseServices/base-services.service';
 import { ActivatedRoute } from '@angular/router';
 
