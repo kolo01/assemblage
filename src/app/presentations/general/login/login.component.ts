@@ -3,26 +3,51 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BaseServicesService } from '../../../core/services/baseServices/base-services.service';
-import { BrowserModule } from '@angular/platform-browser';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+import { ForgetPasswordComponent } from '../forget-password/forget-password.component';
+import { LocalStorageServiceService } from '../../../core/services/allOthers/local-storage-service.service';
+
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule, FormsModule,ReactiveFormsModule],
+  imports: [FormsModule, CommonModule, HttpClientModule, FormsModule,ReactiveFormsModule, ButtonModule,ForgetPasswordComponent,DialogModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  myForm: FormGroup;
-  isConnected = false;
-  token: string = ""
 
-  constructor(private baseName: BaseServicesService,private fb: FormBuilder, private http: HttpClient){
+  constructor(private baseName: BaseServicesService,private fb: FormBuilder, private http: HttpClient, private localStore: LocalStorageServiceService){
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
+
+///Modal  parameter
+email : string = "";
+visible: boolean = false;
+
+showDialog() {
+        this.visible = true;
+    }
+
+
+
+
+
+
+
+
+
+
+
+  myForm: FormGroup;
+  isConnected = false;
+  token: string = ""
+
+
 
 
   onSubmit() {

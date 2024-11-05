@@ -48,7 +48,63 @@
                 Se souvenir
               </label>
             </div>
-            <a href="#!" class="text-body">Mot de Passe oublié?</a>
+
+            <button (click)="showDialog()" style="background-color: transparent; text-decoration: underline; cursor: pointer; border: none;  " > Mot de passe oublié?</button>
+<div class="card flex justify-center">
+
+  <p-dialog header="Reinitialisation du mot de passe" [modal]="true" [(visible)]="visible" [style]="{ width: '50rem'}" >
+    <div
+    class="container height-100 d-flex justify-content-center align-items-center"
+  >
+    <div class="position-relative">
+      <div class="card p-2 text-center">
+        <h6>
+         Veuillez valider votre compte <br />
+
+        </h6>
+        <div><span>Un code a usage unique a été envoyé à </span> <small>{{email}}</small></div>
+        <form>
+        <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+
+          <input
+            class="m-2 text-center form-control rounded"
+            type="text"
+            id="first"
+            maxlength="1"
+            width="50px"
+          />
+          <input
+            class="m-2 text-center form-control rounded"
+            type="text"
+            id="second"
+            maxlength="1"
+            width="50px"
+          />
+          <input
+            class="m-2 text-center form-control rounded"
+            type="text"
+            id="third"
+            maxlength="1"
+            width="50px"
+          />
+          <input
+            class="m-2 text-center form-control rounded"
+            type="text"
+            id="fourth"
+            maxlength="1"
+            width="50px"
+          />
+
+        </div>
+      </form>
+        <div class="mt-4">
+          <button class="btn btn-danger px-4 validate">Validate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </p-dialog>
+</div>
           </div>
 
           <div class="text-center text-lg-start mt-4 pt-2">
