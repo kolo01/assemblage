@@ -1,23 +1,25 @@
 import { Routes } from '@angular/router';
-import { AllPropertiesComponent } from './pages/general/all-properties/all-properties.component';
-import { DetailsPropertyComponent } from './pages/general/details-property/details-property.component';
-import { LandingPageComponent } from './pages/general/landing-page/landing-page.component';
-import { LoginComponent } from './pages/general/login/login.component';
-import { RegisterComponent } from './pages/general/register/register.component';
-import { OtpValidatorComponent } from './pages/general/otp-validator/otp-validator.component';
-import { BecomeOwnerComponent } from './pages/general/become-owner/become-owner.component';
-import { ChatComponent } from './pages/general/chat/chat.component';
-import { NotFoundPageComponent } from './pages/general/not-found-page/not-found-page.component';
-import { RegisterSpecFormsComponent } from './pages/general/register-spec-forms/register-spec-forms.component';
-import { ReviewsComponent } from './pages/general/reviews/reviews.component';
-import { HomePageComponent } from './pages/owner/home-page/home-page.component';
-import { DocumentsComponent } from './pages/owner/documents/documents.component';
-import { ApplyingComponent } from './pages/owner/applying/applying.component';
-import { ProfilsComponent } from './pages/owner/profils/profils.component';
-import { PropertiesComponent } from './pages/owner/properties/properties.component';
-import { LandingPageProprietaireComponent } from './pages/owner/landing-page-proprietaire/landing-page-proprietaire.component';
-import { AboutComponent } from './pages/general/about/about.component';
-import { ContactComponent } from './pages/general/contact/contact.component';
+import { LandingPageComponent } from './presentations/general/landing-page/landing-page.component';
+import { AllPropertiesComponent } from './presentations/general/all-properties/all-properties.component';
+import { DetailsPropertyComponent } from './presentations/general/details-property/details-property.component';
+import { LoginComponent } from './presentations/general/login/login.component';
+import { RegisterComponent } from './presentations/general/register/register.component';
+import { OtpValidatorComponent } from './presentations/general/otp-validator/otp-validator.component';
+import { BecomeOwnerComponent } from './presentations/general/become-owner/become-owner.component';
+import { ChatComponent } from './presentations/general/chat/chat.component';
+import { RegisterSpecFormsComponent } from './presentations/general/register-spec-forms/register-spec-forms.component';
+import { ReviewsComponent } from './presentations/general/reviews/reviews.component';
+import { AboutComponent } from './presentations/general/about/about.component';
+import { ContactComponent } from './presentations/general/contact/contact.component';
+import { ForgetPasswordComponent } from './presentations/general/forget-password/forget-password.component';
+import { HomePageComponent } from './presentations/owner/home-page/home-page.component';
+import { DocumentsComponent } from './presentations/owner/documents/documents.component';
+import { ApplyingComponent } from './presentations/owner/applying/applying.component';
+import { ProfilsComponent } from './presentations/owner/profils/profils.component';
+import { PropertiesComponent } from './presentations/owner/properties/properties.component';
+import { LandingPageProprietaireComponent } from './presentations/owner/landing-page-proprietaire/landing-page-proprietaire.component';
+import { NotFoundPageComponent } from './presentations/general/not-found-page/not-found-page.component';
+
 
 
 export const routes: Routes = [
@@ -34,6 +36,7 @@ export const routes: Routes = [
   {path: 'reviews', component: ReviewsComponent },
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
+  {path: 'forgot-password', component: ForgetPasswordComponent},
 
 
 

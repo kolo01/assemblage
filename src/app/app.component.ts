@@ -9,5 +9,5 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'retry-front';
+  title = 'YELEMAN CI';
 }
