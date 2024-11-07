@@ -49,7 +49,8 @@ export class RegisterComponent {
     this.baseService.post('users', this.formInsc.value).subscribe(
       (res: any) => {
         console.log(res);
-        this.localeStore.setItem('username', this.formInsc.value.username);
+        this.localeStore.setItem('username', JSON.stringify(this.formInsc.value.username));
+        this.localeStore.setItem('email', JSON.stringify(this.formInsc.value.email));
         this.router.navigate(['/otp_validator']);
       },
       (error: any) => {
