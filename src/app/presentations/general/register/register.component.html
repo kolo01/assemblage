@@ -21,19 +21,19 @@
             ">
           <div class="card-body p-5 shadow-5 text-center">
             <h2 class="fw-bold mb-5">Inscription</h2>
-            <form method="post" #form="ngForm" onsubmit="demo" >
+            <form [formGroup]="formInsc" >
 
               <!-- choix du type de compte -->
 
               <div class="row">
                 <div class="col-md-5 mb-4">
-                  <input class="form-check-input" type="radio" name="user_type" id="exampleRadios1" value="LOCATAIRE" checked>
+                  <input class="form-check-input"   type="radio" formControlName="user_type" id="exampleRadios1" value="LOCATAIRE" checked>
                   <label class="form-check-label ms-1" for="exampleRadios1">
                    Locataire
                   </label>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <input class="form-check-input" type="radio" name="user_type" id="exampleRadios2" value="PROPRIETAIRE">
+                  <input class="form-check-input" type="radio" formControlName="user_type" id="exampleRadios2" value="PROPRIETAIRE">
                   <label  class="form-check-label ms-1" for="exampleRadios2">
                     Proprietaire
                   </label>
@@ -42,20 +42,20 @@
 
  <!-- username input -->
  <div data-mdb-input-init class="form-outline mb-4">
-  <input type="text" id="username" required  name="username" class="form-control" />
+  <input type="text" id="username" required  formControlName="username" class="form-control" />
   <label class="form-label" for="username">Nom d'utilisateur</label>
 </div>
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div data-mdb-input-init class="form-outline">
-                    <input required  type="text" id="first_name" name="first_name" class="form-control" />
+                    <input required  type="text" id="first_name" formControlName="first_name" class="form-control" />
                     <label class="form-label" for="form3Example1">Nom</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div data-mdb-input-init class="form-outline">
-                    <input required  type="text" id="last_name" name="last_name" class="form-control" />
+                    <input required  type="text" id="last_name" formControlName="last_name" class="form-control" />
                     <label class="form-label" for="form3Example2">Prenoms</label>
                   </div>
                 </div>
@@ -67,13 +67,13 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div data-mdb-input-init class="form-outline">
-                    <input required  type="text" id="email" name="email" class="form-control" />
+                    <input required  type="text" id="email" formControlName="email" class="form-control" />
                     <label class="form-label" for="form3Example1">Email</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div data-mdb-input-init class="form-outline">
-                    <input required  type="text" id="phone_number" name="phone_number" class="form-control" />
+                    <input required  type="text" id="phone_number" formControlName="phone_number" class="form-control" />
                     <label class="form-label" for="form3Example2">Numéro de telephone</label>
                   </div>
                 </div>
@@ -82,8 +82,8 @@
               <!-- cni et numero cni  -->
               <div class="row">
                 <div class="col-md-6 mb-4">
-                  <select required  class="form-select" id="cards_type" name="cards_type" aria-label="Default select example">
-                    <option selected>Selectionner un type de document</option>
+                  <select required  class="form-select" id="cards_type" formControlName="cards_type" aria-label="Default select example">
+                    <option [defaultSelected]="true" selected>Selectionner un type de document</option>
                     <option value="CNI">CNI</option>
                     <option value="ATTESTATION">ATTESTATION D'IDENTITE</option>
                     <option value="RECEPISSE">RECEPISSE DE CNI</option>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                   <div data-mdb-input-init class="form-outline">
-                    <input required  type="number" id="num_cni" name="num_cni" class="form-control" />
+                    <input required  type="text" id="num_cni" maxlength="15" formControlName="num_cni" class="form-control" />
                     <label class="form-label" for="form3Example2">Numero du document</label>
                   </div>
                 </div>
@@ -103,8 +103,8 @@
 
               <!-- Password input -->
               <div data-mdb-input-init class="form-outline mb-4">
-                <input required  type="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Password</label>
+                <input required  type="password" formControlName="password" id="password" class="form-control" />
+                <label class="form-label" for="password">Password</label>
               </div>
 
               <!-- Checkbox -->
@@ -116,32 +116,14 @@
               </div> -->
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
+              <button type="submit" (click)="handleSubmit()" class="btn btn-primary btn-block mb-4">
                 S'inscrire
               </button>
               <p class="text-center">
                Vous avez deja un compte? <a href="/login">Connectez vous</a>
               </p>
 
-              <!-- Register buttons -->
-              <!-- <div class="text-center">
-                <p>or sign up with:</p>
-                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-
-                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
-
-                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
-
-                <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div> -->
+             
             </form>
           </div>
         </div>
@@ -153,6 +135,5 @@
       </div>
     </div>
   </div>
-  <!-- Jumbotron -->
 </section>
-<!-- Section: Design Block -->
+
