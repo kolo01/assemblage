@@ -41,22 +41,22 @@ export class OtpValidatorComponent {
         : ' ';
 
     this.forgetPass = new FormGroup({
-      otp1: new FormControl('1', [
+      otp1: new FormControl('', [
         Validators.required,
         Validators.maxLength(1),
         Validators.minLength(1),
       ]),
-      otp2: new FormControl('2', [
+      otp2: new FormControl('', [
         Validators.required,
         Validators.maxLength(1),
         Validators.minLength(1),
       ]),
-      otp3: new FormControl('3', [
+      otp3: new FormControl('', [
         Validators.required,
         Validators.maxLength(1),
         Validators.minLength(1),
       ]),
-      otp4: new FormControl('4', [
+      otp4: new FormControl('', [
         Validators.required,
         Validators.maxLength(1),
         Validators.minLength(1),

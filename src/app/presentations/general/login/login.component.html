@@ -9,6 +9,13 @@
         />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <p>
+          @if (resetMessage != "") {
+            <div class="alert alert-success" role="alert">
+              {{ resetMessage }}
+            </div>
+          }
+        </p>
         <form [formGroup]="myForm">
 
           <!-- Email input -->
@@ -49,7 +56,7 @@
             </div>
 
             <button
-              (click)="showDialog()"
+              (click)="showDialogModal()"
               style="
                 background-color: transparent;
                 text-decoration: underline;
@@ -61,68 +68,7 @@
             </button>
 
           </div>
-          <div class="card flex justify-center">
-            <p-dialog
-              [modal]="true"
-              [(visible)]="visible"
-              [style]="{ width: '25rem' }"
-            >
-            <div style="display: grid;">
-              <h5>Reinitialisation du mot de passe</h5>
 
-            </div>
-              <div
-                class="container height-100 d-flex justify-content-center align-items-center"
-              >
-
-                <div class="position-relative">
-                  <div class="card p-2 text-center">
-                    <h6>Veuillez valider votre compte <br /></h6>
-                    <div>
-                      <span>Un code a usage unique a été envoyé à </span>
-                      <small>{{ email }}</small>
-                    </div>
-                    <form>
-                      <div
-                        id="otp"
-                        class="inputs d-flex flex-row justify-content-center mt-2"
-                      >
-                        <input
-                          class="m-2 text-center form-control rounded"
-                          type="text"
-                          id="first"
-                          maxlength="1"
-                        />
-                        <input
-                          class="m-2 text-center form-control rounded"
-                          type="text"
-                          id="second"
-                          maxlength="1"
-                        />
-                        <input
-                          class="m-2 text-center form-control rounded"
-                          type="text"
-                          id="third"
-                          maxlength="1"
-                        />
-                        <input
-                          class="m-2 text-center form-control rounded"
-                          type="text"
-                          id="fourth"
-                          maxlength="1"
-                        />
-                      </div>
-                    </form>
-                    <div class="mt-4">
-                      <button class="btn btn-danger px-4 validate">
-                        Validate
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </p-dialog>
-          </div>
           <div class="text-center text-lg-start mt-4 pt-2">
             <button
               (click)="onSubmit()"
@@ -167,3 +113,151 @@
     <!-- Right -->
   </div>
 </section>
+
+
+
+
+<!-- modal1 -->
+<div class="card flex justify-center">
+  <p-dialog
+    [modal]="true"
+    header="Entrez L'email"
+    [(visible)]="visible"
+    [style]="{ width: '25rem' }"
+  >
+  <div style="display: grid;">
+
+
+  </div>
+    <div
+      class=" height-100 d-flex justify-content-center align-items-center"
+    >
+
+      <div class="position-relative">
+        <div class="p-2 text-center">
+          <h6><br /></h6>
+          <div>
+
+          </div>
+          <form style="display: grid;" [formGroup]="resetFirstForm">
+            <div class="form-group">
+
+              <input type="email"  formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Votre email">
+
+            </div>
+          <div class="mt-4">
+            <button (click)="showDialogModal2()" class="btn btn-danger px-4 validate">
+              Envoyer le code
+            </button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+</div>
+
+<!-- Modal2 -->
+<div class="card flex justify-center">
+  <p-dialog
+    [modal]="true"
+    header="Renseigner l'otp "
+    [(visible)]="visible2"
+    [style]="{ width: '25rem' }"
+  >
+
+    <div
+      class="container height-100 d-flex justify-content-center align-items-center"
+    >
+
+      <div class="position-relative">
+        <div class=" p-2 text-center">
+          <h6> <br /></h6>
+          <div>
+            <span>Un code a usage unique a été envoyé à </span>
+            <small>{{ email }}</small>
+          </div>
+          <form [formGroup]="forgetPass">
+            <div
+              id="otp"
+              class="inputs d-flex flex-row justify-content-center mt-2"
+            >
+              <input
+                class="m-2 text-center form-control rounded"
+                type="text"
+                formControlName="otp1"
+                id="first"
+                maxlength="1"
+              />
+              <input
+                class="m-2 text-center form-control rounded"
+                type="text"
+                formControlName="otp2"
+                id="second"
+                maxlength="1"
+              />
+              <input
+                class="m-2 text-center form-control rounded"
+                type="text"
+                formControlName="otp3"
+                id="third"
+                maxlength="1"
+              />
+              <input
+                class="m-2 text-center form-control rounded"
+                type="text"
+                formControlName="otp4"
+                id="fourth"
+                maxlength="1"
+              />
+            </div>
+          </form>
+          <div class="mt-4">
+            <button (click)="showDialogModal3()" class="btn btn-danger px-4 validate">
+              Soumettre
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+</div>
+
+
+<!-- modal3 -->
+<div class="card flex justify-center">
+  <p-dialog
+    [modal]="true"
+    [(visible)]="visible3"
+    header="Formulaire de modification"
+    [style]="{ width: '25rem' }"
+  >
+
+    <div
+      class="container height-100 d-flex justify-content-center align-items-center"
+    >
+
+      <div class="position-relative">
+        <div class="p-2 text-center">
+
+          <form [formGroup]="resetSecondForm" style="gap: 40px;">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Mot de Passe</label>
+              <input type="password"  formControlName="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mot de passe">
+
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirmer Mot de Passe</label>
+              <input type="password " formControlName="confirmPassword" class="form-control" id="exampleInputPassword1" placeholder="Confirmer Mot de Passe">
+            </div>
+          </form>
+          <div class="mt-4">
+            <button (click)="sendData()" class="btn btn-danger px-4 validate">
+              Envoyer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+</div>

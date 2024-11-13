@@ -15,10 +15,11 @@ import { ForgetPasswordComponent } from './presentations/general/forget-password
 import { HomePageComponent } from './presentations/owner/home-page/home-page.component';
 import { DocumentsComponent } from './presentations/owner/documents/documents.component';
 import { ApplyingComponent } from './presentations/owner/applying/applying.component';
-import { ProfilsComponent } from './presentations/owner/profils/profils.component';
+import { ProfilsComponent as OwnerProfils} from './presentations/owner/profils/profils.component';
 import { PropertiesComponent } from './presentations/owner/properties/properties.component';
 import { LandingPageProprietaireComponent } from './presentations/owner/landing-page-proprietaire/landing-page-proprietaire.component';
 import { NotFoundPageComponent } from './presentations/general/not-found-page/not-found-page.component';
+import { ProfilsComponent } from './presentations/general/profils/profils.component';
 
 
 
@@ -37,6 +38,7 @@ export const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'forgot-password', component: ForgetPasswordComponent},
+  {path: 'profils', component: ProfilsComponent},
 
 
 
@@ -46,7 +48,7 @@ export const routes: Routes = [
   {path: 'home', component: HomePageComponent },
   {path: 'home/documents', component: DocumentsComponent },
   {path: 'home/applying', component: ApplyingComponent },
-  {path: 'home/profils', component: ProfilsComponent },
+  {path: 'home/profils', component: OwnerProfils },
   {path: 'home/properties', component: PropertiesComponent },
   {path: 'espace-proprietaire', component: LandingPageProprietaireComponent },
 
