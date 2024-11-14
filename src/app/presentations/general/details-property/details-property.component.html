@@ -1,244 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-<body>
-
-
-
-
-
-
-  <div class="single-property section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="main-image">
-            <img src="default/default.jpg" alt="">
+<app-navbar/>
+<div class="single-property section" style="margin-top: 40px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="main-image">
+          <img src="assets/images/images.jfif" alt="Image de l'appartement" />
+        </div>
+        <div class="main-content">
+          <h4>Immeuble R+3 avec plusieurs types d'appartements</h4>
+          <pre>
+                      Nous sommes sur un chantier .. en finition, R+3 et à l’intérieur de vaste couloir qui bien vaste pour une liberté fluide de circulation,<br>
+                      des chauffe eau à tous les niveaux. Le bâtiment est composé de différentes types d’appartements tels que les studios qui font en largeurs : 08M70 et en longueur 08M70 ce qui nous donne un total de 17M2.
+                  </pre>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="accordion" id="accordionOne">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Commodités
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionOne"
+                >
+                  <div class="accordion-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">N° chambre : 1</li>
+                      <li class="list-group-item">N° Douches : 1</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="main-content">
-            <div style="justify-content: space-between; width: 30wh; display: flex; align-items: center; align-content: center;">
-            <div>
-              <span  class="category">{{property[6]}}</span></div>
-            <div style="padding-top: 20px;">
-
-            <a style="display: flex; width: fit-content; height: 130px;" href={{visited}} target="_blank">
-
-              <p style="font-size: 15px; color: black;font-weight: 700; width: 200px;">Visite Virtuelle</p>
-              <img src="img/3d.jpg" width="100" height="100"/>
-
-
-            </a>
-          </div>
-          </div>
-            <h4>{{property[4]}}</h4>
-            <pre>
-              {{property[7]}}
-            </pre>
-
-
-          </div>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Commodités
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="col-lg-6">
+            <div class="accordion" id="accordionTwo">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <span class="accordion-button"> Avantages </span>
+                </h2>
                 <div class="accordion-body">
                   <ul class="list-group">
-                    <li class="list-group-item">N° chambre : s{{(property[8])}} </li>
-                    <li class="list-group-item">N° Douches : {{(property[8])}}</li>
-
-                    <!-- <li class="list-group-item">Gardien : </li> -->
-
+                    <li class="list-group-item">Piscine : Oui</li>
+                    <li class="list-group-item">Espace vert : Oui</li>
+                    <li class="list-group-item">École/Université : Proche</li>
+                    <li class="list-group-item">Centre commercial : Proche</li>
+                    <li class="list-group-item">Gardien : Oui</li>
+                    <li class="list-group-item">Zone calme : Oui</li>
+                    <li class="list-group-item">Balcon/Terrasse : Oui</li>
+                    <li class="list-group-item">Salle de gym : Oui</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Avantages
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <ul class="list-group">
-                    <li class="list-group-item">Piscine : </li>
-                    <li class="list-group-item">Espace vert :</li>
-                    <li class="list-group-item">Ecole/Universite : </li>
-                    <li class="list-group-item">Centre commercial : </li>
-                    <li class="list-group-item">Gardien : </li>
-                    <li class="list-group-item">Zone calme : </li>
-                    <li class="list-group-item">balcon/terrace : </li>
-                    <li class="list-group-item">Salle de gym : </li>
-                    <!-- <li class="list-group-item">Gardien : </li> -->
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="info-table">
-            <ul>
-              <li>
-                <img src="assets/images/info-icon-01.png" alt="" style="max-width: 52px;">
-                <h4>{{property[6]}} m2<br><span></span></h4>
-              </li>
-              <li>
-                <img src="assets/images/info-icon-02.png" alt="" style="max-width: 52px;">
-                <h4>Contrat<br><span>Contrat disponible</span></h4>
-              </li>
-              <li>
-                <img src="assets/images/info-icon-03.png" alt="" style="max-width: 52px;">
-                <h4>Paiement<br><span>Possibilité de validé le paiement</span></h4>
-              </li>
-              <li>
-                <img src="assets/images/info-icon-04.png" alt="" style="max-width: 52px;">
-                <h4>Garantie<br><span>Nous sommes disponible 24/7 </span></h4>
-              </li>
-              <div style="display: grid;gap: 20px; margin-bottom: 20px;">
-                <Button class="btn btn-primary">Demande de visite</Button>
-                <Button class="btn btn-primary">Demande de location</Button>
-            </div>
-            </ul>
-          </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="info-table">
+          <ul>
+            <li>
+              <img
+                src="icons/surface.png"
+                alt="Surface"
+                style="max-width: 52px"
+              />
+              <h4>Surface<br /><span> 60m²</span></h4>
+            </li>
+            <li>
+              <img
+                src="icons/contrat.png"
+                alt="Contrat"
+                style="max-width: 52px"
+              />
+              <h4>Contrat<br /><span>Contrat disponible</span></h4>
+            </li>
+            <li>
+              <img
+                src="icons/paiement.png"
+                alt="Paiement"
+                style="max-width: 52px"
+              />
+              <h4>
+                Paiement<br /><span>Possibilité de valider le paiement</span>
+              </h4>
+            </li>
+            <li>
+              <img
+                src="icons/garantie.png"
+                alt="Garantie"
+                style="max-width: 52px"
+              />
+              <h4>Garantie<br /><span>Nous sommes disponibles 24/7</span></h4>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-  <!-- <div class="section best-deal">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="section-heading">
-            <h6>| Best Deal</h6>
-            <h2>Find Your Best Deal Right Now!</h2>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="tabs-content">
-            <div class="row">
-              <div class="nav-wrapper ">
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="appartment-tab" data-bs-toggle="tab" data-bs-target="#appartment" type="button" role="tab" aria-controls="appartment" aria-selected="true">Appartment</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button" role="tab" aria-controls="villa" aria-selected="false">Villa House</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab" data-bs-target="#penthouse" type="button" role="tab" aria-controls="penthouse" aria-selected="false">Penthouse</button>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="appartment" role="tabpanel" aria-labelledby="appartment-tab">
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Total Flat Space <span>540 m2</span></li>
-                          <li>Floor number <span>3</span></li>
-                          <li>Number of rooms <span>8</span></li>
-                          <li>Parking Available <span>Yes</span></li>
-                          <li>Payment Process <span>Bank</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img src="assets/images/deal-01.jpg" alt="">
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>All Info About Apartment</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
-                      <div class="icon-button">
-                        <a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="villa" role="tabpanel" aria-labelledby="villa-tab">
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Total Flat Space <span>250 m2</span></li>
-                          <li>Floor number <span>26th</span></li>
-                          <li>Number of rooms <span>5</span></li>
-                          <li>Parking Available <span>Yes</span></li>
-                          <li>Payment Process <span>Bank</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img src="assets/images/deal-02.jpg" alt="">
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>Detail Info About New Villa</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
-                      <div class="icon-button">
-                        <a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="penthouse" role="tabpanel" aria-labelledby="penthouse-tab">
-                  <div class="row">
-                    <div class="col-lg-3">
-                      <div class="info-table">
-                        <ul>
-                          <li>Total Flat Space <span>320 m2</span></li>
-                          <li>Floor number <span>34th</span></li>
-                          <li>Number of rooms <span>6</span></li>
-                          <li>Parking Available <span>Yes</span></li>
-                          <li>Payment Process <span>Bank</span></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <img src="assets/images/deal-03.jpg" alt="">
-                    </div>
-                    <div class="col-lg-3">
-                      <h4>Extra Info About Penthouse</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut Kinfolk tonx seitan crucifix 3 wolf moon bicycle rights keffiyeh snackwave wolf same vice, chillwave vexillologistlabore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
-                      <div class="icon-button">
-                        <a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  </body>
-</html>
+</div>

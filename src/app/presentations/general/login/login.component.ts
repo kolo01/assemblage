@@ -17,6 +17,8 @@ import { LocalStorageServiceService } from '../../../core/services/allOthers/loc
 import { Router } from '@angular/router';
 
 import { ToastrService } from 'ngx-toastr';
+import { FooterComponent } from "../footer/footer.component";
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-login',
@@ -27,7 +29,9 @@ import { ToastrService } from 'ngx-toastr';
     ReactiveFormsModule,
     ButtonModule,
     DialogModule,
-  ],
+    FooterComponent,
+    NavbarComponent
+],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
@@ -138,6 +142,7 @@ export class LoginComponent {
   }
 
   onSubmit() {
+    this.route.navigate(['/owner/home']);
     if (this.myForm.valid) {
       // Send a POST request
       this.baseName.post('login', this.myForm.value).subscribe({

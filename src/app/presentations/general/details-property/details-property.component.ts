@@ -4,12 +4,13 @@ import { BaseServicesService } from '../../../core/services/baseServices/base-se
 import { ActivatedRoute } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../navbar/navbar.component";
 
 
 @Component({
   selector: 'app-details-property',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './details-property.component.html',
   styleUrl: './details-property.component.scss'
 })

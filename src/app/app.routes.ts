@@ -20,6 +20,9 @@ import { PropertiesComponent } from './presentations/owner/properties/properties
 import { LandingPageProprietaireComponent } from './presentations/owner/landing-page-proprietaire/landing-page-proprietaire.component';
 import { NotFoundPageComponent } from './presentations/general/not-found-page/not-found-page.component';
 import { ProfilsComponent } from './presentations/general/profils/profils.component';
+import { SidebarOwnerComponent } from './presentations/owner/sidebar-owner/sidebar-owner.component';
+import { NotificationComponent } from './presentations/owner/notification/notification.component';
+import { AddPropertyComponent } from './presentations/owner/add-property/add-property.component';
 
 
 
@@ -45,13 +48,14 @@ export const routes: Routes = [
 
 
   //Owner routing
-  {path: 'home', component: HomePageComponent },
-  {path: 'home/documents', component: DocumentsComponent },
-  {path: 'home/applying', component: ApplyingComponent },
-  {path: 'home/profils', component: OwnerProfils },
-  {path: 'home/properties', component: PropertiesComponent },
-  {path: 'espace-proprietaire', component: LandingPageProprietaireComponent },
-
+  {path: 'owner', component: SidebarOwnerComponent, children: [
+    {path: 'home', component: HomePageComponent,},
+    {path: 'properties', component: PropertiesComponent },
+    {path: 'applying', component: ApplyingComponent },
+    {path: 'profils', component: ProfilsComponent },
+    {path: 'notifications', component: NotificationComponent },
+    {path: 'add-property', component: AddPropertyComponent },
+  ]},
 
 
 

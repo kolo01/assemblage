@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
 import {
@@ -11,11 +11,13 @@ import {
 } from '@angular/forms';
 import { BaseServicesService } from '../../../core/services/baseServices/base-services.service';
 import { LocalStorageServiceService } from '../../../core/services/allOthers/local-storage-service.service';
+import { FooterComponent } from "../footer/footer.component";
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, FooterComponent, NavbarComponent],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
@@ -25,10 +27,16 @@ export class RegisterComponent {
   constructor(
     private router: Router,
     private baseService: BaseServicesService,
-    private localeStore: LocalStorageServiceService
+    private localeStore: LocalStorageServiceService,
+    private activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
+
+
+    this.activatedRoute.fragment.subscribe((fragment: string | null) => {
+      if (fragment) this.jumpToSection(fragment);
+    });
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.formInsc = new FormGroup({
@@ -57,5 +65,9 @@ export class RegisterComponent {
         console.log(error);
       }
     );
+  }
+
+  jumpToSection(section: string | null) {
+    if (section) document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
   }
 }

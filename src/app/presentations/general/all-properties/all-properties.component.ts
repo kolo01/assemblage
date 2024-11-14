@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Property } from '../../../domains/interfaces/property';
 import { BaseServicesService } from '../../../core/services/baseServices/base-services.service';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
   selector: 'app-all-properties',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NavbarComponent],
   templateUrl: './all-properties.component.html',
   styleUrl: './all-properties.component.scss',
 })

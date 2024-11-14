@@ -1,129 +1,130 @@
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-4 pb-5">
-            <!-- Account Sidebar-->
-            <div class="author-card pb-3">
-                <div class="author-card-cover" style="background-image: url(https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg);"></div>
-                <div class="author-card-profile">
-                    <div class="author-card-avatar"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Daniel Adams">
-                    </div>
-                    <div class="author-card-details">
-                        <h5 class="author-card-name text-lg">Daniel Adams</h5><span class="author-card-position">Joined February 06, 2017</span>
-                    </div>
-                </div>
-            </div>
-            <div class="wizard">
-                <nav class="list-group list-group-flush">
-                    <a class="list-group-item" href="#">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div><i class="fe-icon-shopping-bag mr-1 text-muted"></i>
-                                <div class="d-inline-block font-weight-medium text-uppercase">Orders List</div>
-                            </div><span class="badge badge-secondary">6</span>
-                        </div>
-                    </a><a class="list-group-item active" href="#"><i class="fe-icon-user text-muted"></i>Profile Settings</a><a class="list-group-item" href="#"><i class="fe-icon-map-pin text-muted"></i>Addresses</a>
-                    <a class="list-group-item" href="https://www.bootdey.com/snippets/view/bs4-wishlist-profile-page" target="__blank">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div><i class="fe-icon-heart mr-1 text-muted"></i>
-                                <div class="d-inline-block font-weight-medium text-uppercase">My Wishlist</div>
-                            </div><span class="badge badge-secondary">3</span>
-                        </div>
-                    </a>
-                    <a class="list-group-item" href="https://www.bootdey.com/snippets/view/bs4-account-tickets" target="__blank">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div><i class="fe-icon-tag mr-1 text-muted"></i>
-                                <div class="d-inline-block font-weight-medium text-uppercase">My Tickets</div>
-                            </div><span class="badge badge-secondary">4</span>
-                        </div>
-                    </a>
-                </nav>
-            </div>
-        </div>
-        <!-- Profile Settings-->
-        <div class="col-lg-8 pb-5">
-            <form class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="account-fn">User Name</label>
-                        <input class="form-control" type="text" id="account-fn" value="DanAdams30" required="">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="account-fn">First Name</label>
-                        <input class="form-control" type="text" id="account-fn" value="Daniel" required="">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="account-ln">Last Name</label>
-                        <input class="form-control" type="text" id="account-ln" value="Adams" required="">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="formFile" class="form-label">Choose picture</label>
-                        <input class="form-control" type="file" id="formFile">
-                    </div>
-                </div>
-                <div class="col-md-12"> <br>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Select card type</option>
-                        <option value="cni">CNI</option>
-                        <option value="passport">Passeport</option>
-                        <option value="attestation">Attestation</option>
-                        <option value="other">Autre</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="formFileSm" class="form-label">Card Number</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="************" >
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="formFileSm" class="form-label">Card Recto</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="mb-3">
-                        <label for="formFileSm" class="form-label">Card Verso</label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center">
-                        <button class="btn btn-style-1 btn-outline-success" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Appliquer les modifications</button>
-                    </div>
-                </div>
-            </form>
-            <hr class="mt-2 mb-3">
-            <form class="row">
-                <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Current Password</label>
-                    <div class="col-sm-8">
-                      <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">New Password</label>
-                    <div class="col-sm-8">
-                      <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-4 col-form-label">Confirm New Password</label>
-                    <div class="col-sm-8">
-                      <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center">
-                        <button class="btn btn-style-1 btn-outline-success" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Appliquer les modifications</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+  <div class="row">
+      <div class="col-lg-4 pb-5">
+          <!-- Account Sidebar-->
+          <div class="author-card pb-3">
+              <div class="author-card-cover" style="background-image: url(https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg);"></div>
+              <div class="author-card-profile">
+                  <div class="author-card-avatar"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Daniel Adams">
+                  </div>
+                  <div class="author-card-details">
+                      <h5 class="author-card-name text-lg">Daniel Adams</h5><span class="author-card-position">Joined February 06, 2017</span>
+                  </div>
+              </div>
+          </div>
+          <div class="wizard">
+              <nav class="list-group list-group-flush">
+                  <a class="list-group-item" href="#">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div><i class="fe-icon-shopping-bag mr-1 text-muted"></i>
+                              <div class="d-inline-block font-weight-medium text-uppercase">Abonnements</div>
+                          </div><span class="badge badge-secondary">6</span>
+                      </div>
+                  </a><a class="list-group-item active" href="#"><i class="fe-icon-user text-muted"></i>Parametre du profils</a>
+                  <!-- <a class="list-group-item" href="#"><i class="fe-icon-map-pin text-muted"></i>Addresses</a> -->
+                  <!-- <a class="list-group-item" href="https://www.bootdey.com/snippets/view/bs4-wishlist-profile-page" target="__blank">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div><i class="fe-icon-heart mr-1 text-muted"></i>
+                              <div class="d-inline-block font-weight-medium text-uppercase">My Wishlist</div>
+                          </div><span class="badge badge-secondary">3</span>
+                      </div>
+                  </a> -->
+                  <!-- <a class="list-group-item" href="https://www.bootdey.com/snippets/view/bs4-account-tickets" target="__blank">
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div><i class="fe-icon-tag mr-1 text-muted"></i>
+                              <div class="d-inline-block font-weight-medium text-uppercase">My Tickets</div>
+                          </div><span class="badge badge-secondary">4</span>
+                      </div>
+                  </a> -->
+              </nav>
+          </div>
+      </div>
+      <!-- Profile Settings-->
+      <div class="col-lg-8 pb-5">
+          <form class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="account-fn">Nom d'utilisateur</label>
+                      <input class="form-control" type="text" id="account-fn" value="DanAdams30" required="">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="account-fn">Nom</label>
+                      <input class="form-control" type="text" id="account-fn" value="Daniel" required="">
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="account-ln">Prenom</label>
+                      <input class="form-control" type="text" id="account-ln" value="Adams" required="">
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="formFile" class="form-label">Choisir Fichiers</label>
+                      <input class="form-control" type="file" id="formFile">
+                  </div>
+              </div>
+              <div class="col-md-12"> <br>
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>Type de Documents</option>
+                      <option value="cni">CNI</option>
+                      <option value="passport">Passeport</option>
+                      <option value="attestation">Attestation</option>
+                      <option value="other">Autre</option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                  <div class="mb-3">
+                      <label for="formFileSm" class="form-label">Numéro de carte</label>
+                      <input class="form-control form-control-sm" id="formFileSm" type="text" placeholder="************" >
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="mb-3">
+                      <label for="formFileSm" class="form-label">Carte Recto</label>
+                      <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="mb-3">
+                      <label for="formFileSm" class="form-label">Carte Verso</label>
+                      <input class="form-control form-control-sm" id="formFileSm" type="file">
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <button class="btn btn-style-1 btn-outline-success" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Appliquer les modifications</button>
+                  </div>
+              </div>
+          </form>
+          <hr class="mt-2 mb-3">
+          <form class="row">
+              <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label">Mot de Passe Actuelle </label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="inputPassword">
+                  </div>
+              </div>
+              <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label">Nouveau mot de passe</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="inputPassword">
+                  </div>
+              </div>
+              <div class="mb-3 row">
+                  <label for="inputPassword" class="col-sm-4 col-form-label">Confirmer le nouveau mot de passe</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="inputPassword">
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="d-flex flex-wrap justify-content-between align-items-center">
+                      <button class="btn btn-style-1 btn-outline-success" type="button" data-toast="" data-toast-position="topRight" data-toast-type="success" data-toast-icon="fe-icon-check-circle" data-toast-title="Success!" data-toast-message="Your profile updated successfuly.">Appliquer les modifications</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+  </div>
 </div>

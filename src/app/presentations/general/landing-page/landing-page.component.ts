@@ -6,6 +6,7 @@ import { Property } from '../../../domains/interfaces/property';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { AutoCompleteCompleteEvent, AutoCompleteModule } from 'primeng/autocomplete';
+import { FooterComponent } from "../footer/footer.component";
 
 
 
@@ -13,7 +14,7 @@ import { AutoCompleteCompleteEvent, AutoCompleteModule } from 'primeng/autocompl
 @Component({
   selector: 'app-landing-page2',
   standalone: true,
-  imports: [CommonModule,AutoCompleteModule,],
+  imports: [CommonModule, AutoCompleteModule, FooterComponent],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
