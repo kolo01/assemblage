@@ -6,7 +6,9 @@ import { Property } from '../../../domains/interfaces/property';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { AutoCompleteCompleteEvent, AutoCompleteModule } from 'primeng/autocomplete';
-import { FooterComponent } from "../footer/footer.component";
+import { LocalStorageServiceService } from '../../../core/services/allOthers/local-storage-service.service';
+import { AuthentificationService } from '../../../core/services/authenticate/authentification.service';
+
 
 
 
@@ -14,20 +16,30 @@ import { FooterComponent } from "../footer/footer.component";
 @Component({
   selector: 'app-landing-page2',
   standalone: true,
-  imports: [CommonModule, AutoCompleteModule, FooterComponent],
+  imports: [CommonModule, AutoCompleteModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {
   properties : Property[] = []
-  constructor(  private baseService: BaseServicesService) {
+  token: any
+  isConnected : boolean = false
+  constructor(  private baseService: BaseServicesService, private localStore: LocalStorageServiceService, private isAuthenticate: AuthentificationService) {
 
   }
 
 ngOnInit(): void {
-  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-  //Add 'implements OnInit' to the class.
-  this.baseService.getAll("properties/").subscribe( (data) => {
+
+  this.isConnected= this.localStore.getItem('IsConnected') != null ? true : false;
+  if (this.isConnected) {
+
+    this.token = this.localStore.getItem('IsConnected');
+    // this.token= JSON.parse(this.localStore.getItem('IsConnected'));
+    this.token = this.isConnected ? JSON.parse(this.token) : null;
+
+    console.log("token: " + this.token);
+  }
+  this.baseService.getAll("properties").subscribe( (data) => {
     this.properties = data;
     this.properties = this.properties.reverse().slice(0,6)
     console.log(this.properties)
@@ -39,7 +51,6 @@ ngOnInit(): void {
 
 saveTolocalstorage(data:any): void {
   localStorage.setItem('property', JSON.stringify(data));
-
 }
 
 
@@ -49,6 +60,18 @@ value: any;
 
 search(event: AutoCompleteCompleteEvent) {
     this.items = [...Array(10).keys()].map(item => event.query + '-' + item);
+}
+
+
+
+logout():void{
+  localStorage.removeItem('IsConnected');
+}
+
+
+testing():void{
+  console.log(this.isAuthenticate.isAuhenticate());
+  console.log(this.isAuthenticate.getToken());
 }
 
 }

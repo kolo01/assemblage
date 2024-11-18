@@ -1,0 +1,174 @@
+<app-navabar></app-navabar>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <app-sidebar-owner></app-sidebar-owner>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 p-5 mt-5">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Modifier la propriété <i class="fas fa-building"></i></h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <button type="button" class="btn btn-primary">
+            <a routerLink="/properties" class="nav-link">
+              <i class="fas fa-arrow-left me-2"></i>Retour
+            </a>
+          </button>
+        </div>
+      </div>
+
+     <div class="card">
+        <div class="card-body">
+          <form id="addPropertyForm" action="/properties" method="POST">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nom de la propriété</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Type de propriété</label>
+                <select class="form-select" required>
+                  <option value="">Choisir...</option>
+                  <option>Appartement</option>
+                  <option>Duplex</option>
+                  <option>Villa</option>
+                  <option>Studio</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Prix du loyer</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" required>
+                  <span class="input-group-text">FCFA</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Quartier</label>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Nombre de chambres</label>
+                <input type="number" class="form-control" min="0" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Nombre de salles de bain</label>
+                <input type="number" class="form-control" min="0" required>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Surface (m²)</label>
+                <input type="number" class="form-control" min="0" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" rows="3" required></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Photos</label>
+                <input type="file" class="form-control" multiple accept="image/*">
+              </div>
+              <hr>
+              <h4>Charactéristiques</h4>
+              <div class="row">
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">A proximité Ecole/Université</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Quartier calme</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Piscine</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">En zone commerciale</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Etat général: Neuf</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Salle de sport</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Jardin</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Climatisation</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">En centre-ville</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Cuisine Meublée</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Meublée</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Gardien</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Balcon / Terrasse</label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">Espace vert</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 mt-4">
+                <button type="button" class="btn btn-secondary me-2" onclick="window.history.back()">Retour</button>
+                <button type="submit" class="btn btn-primary">Ajouter la propriété</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<app-footer></app-footer>

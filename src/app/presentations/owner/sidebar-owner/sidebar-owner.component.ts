@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import {NavabarComponent} from '../navabar/navabar.component';
 
 @Component({
   selector: 'app-sidebar-owner',
@@ -7,7 +8,8 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
   imports: [
     RouterLink,
     RouterOutlet,
-    RouterLinkActive
+    RouterLinkActive,
+    NavabarComponent
   ],
   templateUrl: './sidebar-owner.component.html',
   styleUrl: './sidebar-owner.component.scss'

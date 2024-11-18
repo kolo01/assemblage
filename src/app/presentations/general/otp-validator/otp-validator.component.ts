@@ -83,7 +83,7 @@ export class OtpValidatorComponent {
     this.baseService.post('otp/verify', {username: this.username?.replaceAll('"',''),otp_code: parseInt(`${this.forgetPass.value.otp1}${this.forgetPass.value.otp2}${this.forgetPass.value.otp3}${this.forgetPass.value.otp4}`),}).subscribe(
       (res: any) => {
         console.log(res);
-        this.localeStore.setItem("IsConnected", res)
+        this.localeStore.setItem("IsConnected", JSON.stringify(res))
         this.route.navigate(["/"])
       },
       (error: any) => {

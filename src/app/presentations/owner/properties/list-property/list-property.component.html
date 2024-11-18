@@ -1,0 +1,184 @@
+<app-navabar></app-navabar>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <app-sidebar-owner></app-sidebar-owner>
+    </nav>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 p-5 mt-5">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Mes Propriétés <i class="fas fa-building"></i></h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <button type="button" class="btn btn-primary">
+            <a routerLink="/add-property" class="nav-link">
+              <i class="fas fa-plus me-2"></i>Ajouter une propriété</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Rechercher une propriété...">
+            <button class="btn btn-outline-secondary" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select class="form-select">
+            <option selected>Filtrer par status</option>
+            <option>Occupé</option>
+            <option>Disponible</option>
+            <option>En maintenance</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4">
+          <div class="card h-100">
+            <div class="position-relative">
+              <div class="badge bg-success position-absolute top-0 end-0 m-3">Occupé</div>
+              <img src="https://placehold.co/600x400" class="card-img-top" alt="Villa Riviera" height="200" style="object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Villa Riviera</h5>
+              <p class="card-text">
+                <i class="fas fa-map-marker-alt text-primary me-2"></i>Cocody, Abidjan
+              </p>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <small class="text-muted">
+                    <i class="fas fa-bed me-2"></i>4 chambres
+                  </small>
+                </div>
+                <div class="col-6">
+                  <small class="text-muted">
+                    <i class="fas fa-bath me-2"></i>3 salles de bain
+                  </small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">450,000 FCFA/mois</h6>
+                <span class="text-success">
+                  <i class="fas fa-circle me-1"></i>Payé
+                </span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <div class="btn-group w-100">
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-edit me-2"></i>Modifier
+                </button>
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-info-circle me-2"></i>Détails
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card h-100">
+            <div class="position-relative">
+              <div class="badge bg-danger position-absolute top-0 end-0 m-3">Disponible</div>
+              <img src="https://placehold.co/600x400" class="card-img-top" alt="Studio Plateau" height="200" style="object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Studio Plateau</h5>
+              <p class="card-text">
+                <i class="fas fa-map-marker-alt text-primary me-2"></i>Plateau, Abidjan
+              </p>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <small class="text-muted">
+                    <i class="fas fa-bed me-2"></i>1 chambre
+                  </small>
+                </div>
+                <div class="col-6">
+                  <small class="text-muted">
+                    <i class="fas fa-bath me-2"></i>1 salle de bain
+                  </small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">150,000 FCFA/mois</h6>
+                <span class="text-danger">
+                  <i class="fas fa-circle me-1"></i>Disponible
+                </span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <div class="btn-group w-100">
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-edit me-2"></i>Modifier
+                </button>
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-info-circle me-2"></i>Détails
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="card h-100">
+            <div class="position-relative">
+              <div class="badge bg-warning position-absolute top-0 end-0 m-3">En maintenance</div>
+              <img src="https://placehold.co/600x400" class="card-img-top" alt="Résidence Perle" height="200" style="object-fit: cover;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Résidence Perle</h5>
+              <p class="card-text">
+                <i class="fas fa-map-marker-alt text-primary me-2"></i>Marcory, Abidjan
+              </p>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <small class="text-muted">
+                    <i class="fas fa-bed me-2"></i>3 chambres
+                  </small>
+                </div>
+                <div class="col-6">
+                  <small class="text-muted">
+                    <i class="fas fa-bath me-2"></i>2 salles de bain
+                  </small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">350,000 FCFA/mois</h6>
+                <span class="text-warning">
+                  <i class="fas fa-circle me-1"></i>En maintenance
+                </span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent">
+              <div class="btn-group w-100">
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-edit me-2"></i>Modifier
+                </button>
+                <button class="btn btn-outline-primary">
+                  <i class="fas fa-info-circle me-2"></i>Détails
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="mt-4">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Précédent</a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Suivant</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+  </div>
+</div>
+<app-footer></app-footer>

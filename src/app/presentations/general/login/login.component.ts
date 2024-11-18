@@ -142,13 +142,13 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.route.navigate(['/owner/home']);
+    // this.route.navigate(['/owner/home']);
     if (this.myForm.valid) {
       // Send a POST request
-      this.baseName.post('login', this.myForm.value).subscribe({
+      this.baseName.post('token', this.myForm.value).subscribe({
         next: (response) => {
           console.log('Form submitted successfully!', response);
-          this.localStore.setItem('IsConnected', response);
+          this.localStore.setItem('IsConnected', JSON.stringify(response));
           // this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Bienvenue!!!' });
           if (response.userType === 'PROPRIETAIRE') {
             this.route.navigate(['/home']);

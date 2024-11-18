@@ -16,13 +16,18 @@ import { HomePageComponent } from './presentations/owner/home-page/home-page.com
 import { DocumentsComponent } from './presentations/owner/documents/documents.component';
 import { ApplyingComponent } from './presentations/owner/applying/applying.component';
 import { ProfilsComponent as OwnerProfils} from './presentations/owner/profils/profils.component';
-import { PropertiesComponent } from './presentations/owner/properties/properties.component';
+
 import { LandingPageProprietaireComponent } from './presentations/owner/landing-page-proprietaire/landing-page-proprietaire.component';
 import { NotFoundPageComponent } from './presentations/general/not-found-page/not-found-page.component';
 import { ProfilsComponent } from './presentations/general/profils/profils.component';
 import { SidebarOwnerComponent } from './presentations/owner/sidebar-owner/sidebar-owner.component';
 import { NotificationComponent } from './presentations/owner/notification/notification.component';
-import { AddPropertyComponent } from './presentations/owner/add-property/add-property.component';
+
+import { ListPropertyComponent } from './presentations/owner/properties/list-property/list-property.component';
+import { DetailPropertyComponent } from './presentations/owner/properties/detail-property/detail-property.component';
+import { TenantsComponent } from './presentations/owner/tenants/tenants.component';
+import { UpdatePropertyComponent } from './presentations/owner/properties/update-property/update-property.component';
+import { AddPropertyComponent } from './presentations/owner3/add-property/add-property.component';
 
 
 
@@ -47,15 +52,16 @@ export const routes: Routes = [
 
 
 
-  //Owner routing
-  {path: 'owner', component: SidebarOwnerComponent, children: [
-    {path: 'home', component: HomePageComponent,},
-    {path: 'properties', component: PropertiesComponent },
-    {path: 'applying', component: ApplyingComponent },
-    {path: 'profils', component: ProfilsComponent },
-    {path: 'notifications', component: NotificationComponent },
-    {path: 'add-property', component: AddPropertyComponent },
-  ]},
+//Owner routing
+{path: 'home', component: HomePageComponent,},
+{path: 'properties', component: ListPropertyComponent },
+{path: 'applying', component: ApplyingComponent },
+{path: 'profils', component: ProfilsComponent },
+{path: 'notifications', component: NotificationComponent },
+{path: 'add-property', component: AddPropertyComponent },
+{path: 'detail-property', component: DetailPropertyComponent },
+{path: 'tenant-property', component: TenantsComponent},
+{path: 'update-property', component: UpdatePropertyComponent},
 
 
 

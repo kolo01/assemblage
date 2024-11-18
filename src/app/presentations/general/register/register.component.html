@@ -25,11 +25,11 @@
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
 
                               <h3 class="register-heading">INSCRIPTION </h3>
-
+                              <form [formGroup]="formInsc">
                                 <div class="row register-form">
                                   <div class="wrapper">
-                                    <input type="radio" name="select" class="todisable" id="option-1" checked>
-                                    <input type="radio" name="select" class="todisable" id="option-2">
+                                    <input type="radio" formControlName="user_type" value="LOCATAIRE" name="user_type" class="todisable" id="option-1" checked>
+                                    <input type="radio" formControlName="user_type" name="user_type" value="PROPRIETAIRE" class="todisable" id="option-2">
                                       <label for="option-1" class="option option-1">
                                         <div class="dot"></div>
                                          <span>Locataire</span>
@@ -41,43 +41,34 @@
                                    </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Nom *" value="" />
+                                            <input type="text" formControlName="first_name" class="form-control" placeholder="Nom *" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Preom *" value="" />
+                                            <input type="text" formControlName="last_name" class="form-control" placeholder="Prenom *" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" placeholder="Mot de passe *" value="" />
+                                            <input type="password" formControlName="password" class="form-control" placeholder="Mot de passe *" value="" />
                                         </div>
 
-                                        <!-- <div class="form-group">
-                                            <div class="col-md-6">
-                                                <label class="radio inline">
-                                                    <input type="radio" name="gender" value="male" checked>
-                                                    <span> Homme </span>
-                                                </label>
-                                                <label class="radio inline">
-                                                    <input type="radio" name="gender" value="female">
-                                                    <span>Femme </span>
-                                                </label>
-                                            </div>
-                                        </div> -->
+
                                     </div>
                                     <div class="col-md-6">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" formControlName="username"  placeholder="Username *" value="" />
+                                    </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Votre Email *" value="" />
+                                            <input type="email" formControlName="email" class="form-control" placeholder="Votre Email *" value="" />
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Numero de telephone*" value="" />
+                                            <input type="text" formControlName="phone_number" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Numero de telephone*" value="" />
                                         </div>
-                                        <div class="form-group">
-                                          <input type="password" class="form-control"  placeholder="Confirmer le mot de passe *" value="" />
-                                      </div>
 
 
-                                        <input type="submit" class="btnRegister"  value="Inscription"/>
+
+                                        <input type="submit" (click)="handleSubmit()" class="btnRegister"  value="Inscription"/>
                                     </div>
                                 </div>
+                              </form>
                             </div>
                             <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <h3  class="register-heading">Apply as a Hirer</h3>

@@ -80,6 +80,15 @@ export class BaseServicesService {
     return this.http.delete(url).pipe();
   }
 
+
+  getToken():any{
+    console.log
+  }
+
+
+
+
+
   private handleError(error: any): any {
     let errorMessage: string = 'Oups quelque chose a mal tourné';
 
